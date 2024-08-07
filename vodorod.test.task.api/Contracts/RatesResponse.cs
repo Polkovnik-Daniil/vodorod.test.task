@@ -1,6 +1,6 @@
 ﻿namespace vodorod.test.task.api.Contracts
 {
-    //ModelResponse
+    //DTO
     public class RatesResponse(Guid Id, decimal Cur_OfficialRate, string Cur_Abbreviation, int Cur_Scale, DateTime date)
     {
         public Guid Id { get; set; } = Id;

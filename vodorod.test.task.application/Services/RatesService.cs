@@ -4,6 +4,9 @@ using vodorod.test.task.core.Models;
 
 namespace vodorod.test.task.application.Services
 {
+    /// <summary>
+    /// Сервис для контроллера, позволяющий выполнять базовые операции с сущностью
+    /// </summary>
     public class RatesService : IModelsService
     {
         private readonly IEntityClassesRepository _entityClassesRepository;
@@ -13,10 +16,18 @@ namespace vodorod.test.task.application.Services
         }
         public async Task<List<RateModel>> GetAllEntities(DateTime dateTime)
         {
+            if (dateTime > DateTime.Now)
+            {
+                return null;
+            }
             return await _entityClassesRepository.Get(dateTime);
         }
         public async Task<RateModel> GetEntity(DateTime dateTime, string Cur_Abbrreviation)
         {
+            if (dateTime > DateTime.Now)
+            {
+                return null;
+            }
             return await _entityClassesRepository.Get(dateTime, Cur_Abbrreviation);
         }
 

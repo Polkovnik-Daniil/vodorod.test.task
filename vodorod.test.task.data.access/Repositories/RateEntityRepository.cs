@@ -7,6 +7,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace vodorod.test.task.data.access.Repositories
 {
+    /// <summary>
+    /// Репозиторий Rate сущности
+    /// </summary>
     public class RateEntityRepository : IEntityClassesRepository
     {
         private readonly VodorotTestTaskDbContext _context;

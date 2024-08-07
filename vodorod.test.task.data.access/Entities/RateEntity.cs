@@ -2,6 +2,9 @@
 
 namespace vodorod.test.task.data.access.Entities
 {
+    /// <summary>
+    /// Сущность
+    /// </summary>
     public class RateEntity
     {
         public Guid Id { get; set; }

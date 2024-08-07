@@ -2,6 +2,9 @@
 
 namespace vodorod.test.task.core.Abstractions
 {
+    /// <summary>
+    /// Интерфейс для сервиса модели
+    /// </summary>
     public interface IModelsService
     {
         Task<Guid> CreateEntity(RateModel rateModel);

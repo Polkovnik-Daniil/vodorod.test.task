@@ -4,6 +4,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace vodorod.test.task.core.Abstractions
 {
+    /// <summary>
+    /// Интерфейс репозитория 
+    /// </summary>
     public interface IEntityClassesRepository
     {
         Task<Guid> Create(RateModel rateModel);

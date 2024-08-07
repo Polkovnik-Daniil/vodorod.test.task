@@ -3,6 +3,9 @@ using vodorod.test.task.data.access;
 
 namespace vodorod.test.task.api.Services
 {
+    /// <summary>
+    /// Инициализирует БД
+    /// </summary>
     public static class ServiceDBProviderExtension
     {
         public static void AddAutomaticMigrationsEF(WebApplication app)

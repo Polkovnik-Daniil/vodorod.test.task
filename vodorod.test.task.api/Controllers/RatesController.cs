@@ -15,6 +15,11 @@ namespace vodorod.test.task.api.Controllers
         {
             _modelsService = modelsService;
         }
+        /// <summary>
+        /// Метод для обработки запроса всех валют конкретной даты
+        /// </summary>
+        /// <param name="date">Дата получения актуальной информации</param>
+        /// <returns></returns>
         [HttpGet("{date}")]
         public async Task<ActionResult<List<RatesResponse>>> GetModels(DateTime date)
         {
@@ -22,6 +27,12 @@ namespace vodorod.test.task.api.Controllers
             var ratesResponses = entities.Select(e => new RatesResponse(e.Id, e.Cur_OfficialRate, e.Cur_Abbreviation, e.Cur_Scale, e.Date));
             return Ok(ratesResponses);
         }
+        /// <summary>
+        /// Метод для обработки запроса валюты конкретной даты
+        /// </summary>
+        /// <param name="date">Дата получения актуальной информации</param>
+        /// <param name="Cur_Abbreviation">Аббревиатура валюты</param>
+        /// <returns></returns>
         [HttpGet("/{date}/{Cur_Abbreviation}")]
         public async Task<ActionResult<List<RatesResponse>>> GetModel(DateTime date, string Cur_Abbreviation)
         {

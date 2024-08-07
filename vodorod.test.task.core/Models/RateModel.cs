@@ -1,7 +1,14 @@
 ﻿
 namespace vodorod.test.task.core.Models
 {
-    //EntityClass
+    /// <summary>
+    /// Модель, в которой описана логика взаимодействия с сущностью. 
+    /// </summary>
+    /// <param name="Id">Уникальный идентификатор</param>
+    /// <param name="Cur_OfficialRate">Оффициальный курс валюты</param>
+    /// <param name="Cur_Abbreviation">Аббривиатура валюты</param>
+    /// <param name="Cur_Scale">Номинальная величина валюты</param>
+    /// <param name="date">Дата определяющая актуальность содержимой информации</param>
     public class RateModel(Guid Id, decimal Cur_OfficialRate, string Cur_Abbreviation, int Cur_Scale, DateTime date)
     {
         public Guid Id { get; set; } = Id;

@@ -5,6 +5,9 @@ using vodorod.test.task.data.access.Entities;
 
 namespace vodorod.test.task.data.access.Configurations
 {
+    /// <summary>
+    /// Концигурационный файл, описывающий сущность
+    /// </summary>
     public class RateConfiguration : IEntityTypeConfiguration<RateEntity>
     {
         public void Configure(EntityTypeBuilder<RateEntity> builder)
