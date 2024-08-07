@@ -1,0 +1,6 @@
+@vodorod.test.task.api_HostAddress = http://localhost:5138
+
+GET {{vodorod.test.task.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
